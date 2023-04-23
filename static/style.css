@@ -1,48 +1,72 @@
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  label {
-    display: inline-block;
-    width: 100px;
-    text-align: right;
-  }
-  
-  input[type="text"],
-  input[type="number"],
-  input[type="email"],
-  input[type="tel"],
-  select {
-    width: 300px;
-    padding: 5px;
-    margin-bottom: 10px;
-  }
-  
-  button[type="submit"] {
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-  }
-  
-  .hide {
-    display: block;
-  }
-  
+body{
+  background-color:  #9a9ae5;
+}
 
+h1{
+  text-align: center;
+  margin-top: 70px;
+}
+
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  background-color: aliceblue;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 2px 2px 7px #888888;
+}
   
-  .hide1 {
-    display: block;
-  }
-  #error-message {
-    color: red;
-    margin-top: 10px;
-  }
+label {
+  display: inline-block;
+  width: 120px;
+  font-size: medium;
+  font-weight: 510;
+}
+  
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"]{
+  width: 288px;
+  padding: 5px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid gray;
+}
+#frequency, #notification {
+  width: 300px;
+  padding: 5px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid gray;
+}
+#btn-submit{
+  text-align: center;
+}
+
+button[type="submit"] {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #9a9ae5;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 15px;
+  height: 30px;
+  cursor: pointer;
+}
+button:hover{
+  background-color: #007bff;
+}
+
+.hide {
+  display: none;
+}
+
+#error-message {
+  color: red;
+  margin-top: 10px;
+}
