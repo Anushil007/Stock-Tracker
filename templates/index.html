@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stock Price Alert</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  
+</head>
+
+<body>
+  <div class="container">
+    <h1>Stock Price Alert</h1>
+    <p>Enter the stock symbol and the price you want to be alerted at.</p>
+    <form id="alert-form">
+      <label for="ticker">Stock Ticker:</label>
+      <input type="text" id="ticker" name="ticker" required>
+      <br>
+      <label for="threshold">Price Threshold:</label>
+      <input type="number" id="threshold" name="threshold" required>
+      <br>
+      <label for="frequency">Check frequency:</label>
+      <select id="frequency" name="frequency">
+        <option value="60">Every Minute</option>
+        <option value="3600">Every Hour</option>
+        <option value="86400">Every Day</option>
+        <option value="604800">Every Week</option>
+      </select>
+      <br>
+      <label for="notification">Notification type:</label>
+      <select id="notification" name="notification">
+        <option value="email" name = "email">Email</option>
+        <option value="text-message" name = "phone">Text Message</option>
+      </select>
+      <br>
+      <div id="email-input" class="hide1">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+      </div>
+
+
+
+      <div id="phone-input" class="hide">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}"disable>
+      </div>
+      <br>
+      <div id="error-message" class="hide"></div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <!-- <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <script src="app.js"></script> -->
+
+  <script>
+    const notificationSelect = document.getElementById("notification");
+const emailinput = document.getElementById("email-input");
+const phoneinput = document.getElementById("phone-input");
+
+notificationSelect.addEventListener("change", function() {
+  const notificationType = notificationSelect.value;
+
+  if (notificationType === "text-message") {
+    emailinput.style.display = "none";
+    phoneinput.style.display = "block";
+  } else {
+    // phoneinput.style.display = "none";
+    emailinput.style.display = "block";
+  }
+});
+</script>
+</body>
+</html>

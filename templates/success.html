@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Subscription Done</title>
+</head>
+<body>
+    <h1>Subscription Done</h1>
+    <p>Thank you for subscribing to stock price notifications for {{ symbol }}.</p>
+    <p>We will notify you when the price of {{ symbol }} goes above {{ threshold }}.</p>
+    <p>You will receive notifications in {{ frequency }} basis.</p>
+
+    <a href="{{ url_for('home') }}" class="btn">Go to Home</a>
+
+</body>
+</html>
